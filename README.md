@@ -109,3 +109,38 @@ configuration can be seen In ‘fbConfig.js’
 3) firebase init
 4) npm run build
 5) firebase deploy
+
+**Inside the application:**
+1) You need to login with the necessary credentials as the project is guarded with authentication
+and also routes are guarded (in this case there are two users setup :
+      a)E-mail: admin@admin.com && test@test.com
+      b) Password: test123 (same for both users)
+2) When you login you will see different menu coming up.
+      a. Now you can see dashboard that has list of wines, there’s a search bar to filter, sort
+      button and a button that will call an API, https://api.openbrewerydb.org/breweries and
+      add all the wine from that API. Also, in dashboard you can click on the box of any wines
+      to go inside its detail page.
+      b. You can see ‘New Wine’ where you can go and create a new wine which will save to the
+      database and get rendered in dashboard.
+      c. There’s a ‘Log Out’ where you can click and log out from the user authentication.
+
+
+
+### Specifications
+
+1) A list of bottles – This is done in ‘Dashboard.js’, completed using hooks. Here the wine list from
+database is saved in ‘wineItems’ and sent to child component ‘WineList’.
+2) Detail view – This is done in ‘WineDetails.js’.
+3) Possibility to add new bottles – This is done in ‘CreateWine.js’
+4) Sorting in list view(sort by name) – The check and uncheck item is saved in ‘sortText’ in
+‘Dashboard.js’ which is again sent to child component ‘WineList’ and where the sortText is
+compared with true/false to arrange the list of wines in ascending or descending order.
+5) Filtering in list view(filter on name)- The text from input field in the top of Dashboard page is
+saved to ‘filterText’ in Dashboard.js which is then again sent to child component ‘WineList’ and
+where the list of wines are filtered based on the filterText to show the desired results.
+6) Use remote api – There’s a button in Dashboard page labelled ‘GET DATA FROM API’ which gets
+all the data from api ‘https://api.openbrewerydb.org/breweries’ and its added to database then
+it is rendered in dashboard. This is done in ‘Dashboard.js’.
+7) Add the user’s comment – This is done in ‘WineDetails.js’ where the comment for each wine by
+the logged in user in saved in the database and is rendered below the wine details.
+8) Save entries on the device- Everything is saved in the firebase.
