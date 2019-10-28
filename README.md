@@ -73,20 +73,24 @@ This is the document on the project which was created based on different require
 the file.
 The project is sent with a zip file along with the email which contains all the modules and code related to
 the project.
-To run the application:
+
+**To run the application:**
 1) Copy the zip file in your folder
 2) Unzip the file
 3) You can use any tools to open the project( Visual Studio Code is best out there)
 4) Go inside the project (in this case: cd {copied location}\TestNovicell\novicell>)
 5) And use terminal and enter ‘npm start’
-Technology used
+
+**Technology used**
 1) React
 2) Redux (state management tool)
 3) Thunk (mediator, that receives the store’s dispatch and dispatch synchronous actions)
 4) Firebase (as database) --- I have made my own database in firebase with my account whose
 configuration can be seen In ‘fbConfig.js’
 5) Materialize CSS
-Library used in React
+
+
+**Library used in React**
 1) npm install create-react-app
 2) npm install react-router-dom
 3) npm install redux
@@ -97,7 +101,9 @@ Library used in React
 8) npm install redux-firestore
 9) npm install moment
 10) npm install fast-sort
-To deploy the project in firebase
+
+
+**To deploy the project in firebase**
 1) npm install -g firebase-tools
 2) firebase login
 3) firebase init
